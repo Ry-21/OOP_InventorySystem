@@ -15,9 +15,10 @@ class Main{
             System.out.println("\nChoose number (0 = Exit): ");
             choice = sc.nextInt();
             if(choice == 0) break;
-            else if(choice == 1) //admin
+            else if(choice == 1) {//admin
                 admin = new Admin();
                 break;
+            }
             else if(choice == 2){ //cashier
                 cashier = new Cashier();
                 //operation.Cashier();

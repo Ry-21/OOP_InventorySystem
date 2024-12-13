@@ -191,7 +191,7 @@ public class Operations{
 
         Node current = head;
         while (current.next != null && 
-            (current.next.data.getModel()),compareTo(model) != 0) {
+            (current.next.data.getModel()).compareTo(model) != 0) {
             current = current.next;
         }
 

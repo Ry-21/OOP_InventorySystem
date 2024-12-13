@@ -8,8 +8,9 @@ public class Cashier extends Operations{
     private String in = "";
     private String modelKey = "";
     private int qty = 0;
-    private Product temp;
+    private Product tempProduct;
     private double countPrice = 0.0;
+    
     public Cashier(){
         while(true){
             System.out.println("Model<space>Qty(F = finish): ");
@@ -17,16 +18,16 @@ public class Cashier extends Operations{
             if(in.compareToIgnoreCase("F") == 0)
                 break;
 
-            modelKey = in.substring(0, indexOf(' ')-1); //before space
-            qty = Integer.parseInt(substring(indexOf(' ')-1, length(in)));//after space
-            temp = search(modelKey);
-            if(temp == null ){
+            modelKey = in.substring(0, in.indexOf(' ')-1); //before space
+            qty = Integer.parseInt(in.substring(in.indexOf(' ')-1, in.length()));//after space
+            tempProduct = search(modelKey);
+            if(tempProduct == null ){
                 System.out.println("Product not found");
             }
             else{
-                temp.countStock -= qty;
-                setProductStatus(temp);
-                countPrice += (temp.price * qty);
+                tempProduct.setCountStock(tempProduct.getCountStock() - qty);
+                setProductStatus(tempProduct);
+                countPrice += (tempProduct.getPrice() * qty);
                 totalSales();
             }
         }

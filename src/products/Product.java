@@ -11,10 +11,10 @@ public class Product{
     private String status = "";
 
     // constructor
-    Product(){
+    public Product(){
 
     }
-     Product(String productType, String brand, String model, 
+    public Product(String productType, String brand, String model, 
      double price, int traceNum, int countStock, String status) {
         this.productType = productType;
         this.brand = brand;
