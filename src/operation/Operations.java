@@ -2,7 +2,7 @@ package operation;
 
 import products.Product;
 
-class Operations{
+public class Operations{
 
 
     /* LINKEDLIST IN THE AREA */

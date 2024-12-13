@@ -3,14 +3,14 @@ package operation;
 import products.Product;
 import java.util.Scanner;
 
-class Cashier extends Operations{
+public class Cashier extends Operations{
     private Scanner sc1 = new Scanner(System.in);
     private String in = "";
     private String modelKey = "";
     private int qty = 0;
     private Product temp;
     private double countPrice = 0.0;
-    Cashier(){
+    public Cashier(){
         while(true){
             System.out.println("Model<space>Qty(F = finish): ");
             in = sc1.nextLine();
